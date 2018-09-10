@@ -128,7 +128,7 @@ func sshRun() {
 	start := time.Now()
 	for k := range c.Hosts {
 		wg.Add(1)
-		host := c.Hosts[k] + ":22"
+		host := c.Hosts[k] + ":55555"
 		go sendCommands(Cfg, host, commands, &wg)
 	}
 	wg.Wait()
